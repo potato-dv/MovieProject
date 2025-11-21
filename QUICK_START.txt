@@ -1,0 +1,81 @@
+═══════════════════════════════════════════════════════════════
+    QUICK START GUIDE - Movies & TV Shows Browser
+═══════════════════════════════════════════════════════════════
+
+📌 SETUP (5 minutes)
+
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Get TMDb API Key:
+   - Visit: https://www.themoviedb.org/
+   - Sign up for free account
+   - Go to Settings → API
+   - Request API key (Developer option)
+   - Copy your API key
+
+3. Configure API Key:
+   - Open: services/tmdb_api.py
+   - Line 9: Replace "YOUR_TMDB_API_KEY_HERE" with your key
+   - Save file
+
+4. Run the app:
+   python login.py
+
+═══════════════════════════════════════════════════════════════
+
+🔑 TEST LOGIN
+
+Username: admin
+Password: admin123
+
+═══════════════════════════════════════════════════════════════
+
+✅ FEATURES
+
+✓ Secure login with hashed passwords
+✓ Browse 20 popular movies
+✓ Browse 20 popular TV shows  
+✓ View posters, titles, years, ratings
+✓ Click posters for detailed information
+✓ Watch trailers on YouTube
+✓ Smooth scrolling gallery
+✓ Loading indicators for better UX
+✓ Modern dark theme UI
+
+═══════════════════════════════════════════════════════════════
+
+🐛 TROUBLESHOOTING
+
+Problem: "Failed to load movies"
+Solution: Check API key in services/tmdb_api.py
+
+Problem: Module not found errors
+Solution: Run "pip install -r requirements.txt"
+
+Problem: Database error
+Solution: Delete users.db file and restart app
+
+═══════════════════════════════════════════════════════════════
+
+📁 KEY FILES TO UNDERSTAND
+
+login.py          - App entry point
+main.py           - Main GUI window
+database/         - User authentication & DB
+services/         - TMDb API integration
+media/            - Image & data processing
+
+═══════════════════════════════════════════════════════════════
+
+🎓 FOR YOUR SCHOOL SUBMISSION
+
+This project demonstrates:
+• SQLite database usage
+• Secure password hashing (SHA-256 + salt)
+• RESTful API integration
+• GUI programming with Tkinter
+• Image processing with Pillow
+• Clean, modular code architecture
+
+═══════════════════════════════════════════════════════════════
