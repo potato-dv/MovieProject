@@ -12,40 +12,6 @@ This application was created as a school project and demonstrates:
 - **Image Processing**: Dynamic poster loading with Pillow
 - **Modular Code Structure**: Well-organized and maintainable codebase
 
-## ✨ Features
-
-- 🔐 **Secure Login System**
-
-  - Username/password authentication
-  - SHA-256 password hashing with salt
-  - SQLite database for user storage
-  - Pre-configured test account (admin/admin123)
-
-- 🎥 **Movie & TV Show Browser**
-
-  - View popular movies and TV shows
-  - Display poster images, titles, release years, and ratings
-  - Scrollable gallery layout
-  - Real-time data from TMDb API
-  - **Click any poster to see detailed information**
-
-- 📽️ **Interactive Details & Trailers**
-
-  - Click movie/TV show posters for full details
-  - View overview, runtime, release date, genres
-  - Watch official trailers on YouTube
-  - See budget, revenue, production info
-  - Beautiful backdrop images
-
-- 🎨 **Modern UI with Loading Indicators**
-  - Clean, dark-themed interface
-  - Responsive grid layout
-  - Smooth scrolling
-  - Visual feedback for active selections
-  - **Animated loading screens** so users don't get frustrated
-  - **Progress bars** during data fetching
-  - **Hover effects** on clickable elements
-
 ## 🚀 Setup Instructions
 
 ### Prerequisites
@@ -88,7 +54,7 @@ TMDB_API_KEY = "YOUR_TMDB_API_KEY_HERE"  # Replace this with your actual key
 **Example:**
 
 ```python
-TMDB_API_KEY = "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+TMDB_API_KEY = "sheesh1234"
 ```
 
 **Option 2: Direct configuration**
@@ -109,39 +75,6 @@ For testing purposes, a default user is created automatically:
 
 - **Username**: `admin`
 - **Password**: `admin123`
-
-## 📁 Project Structure
-
-```
-MovieProject/
-│
-├── login.py                 # Login window entry point
-├── main.py                  # Main application window
-├── config.py               # Configuration file (API key here!)
-├── requirements.txt         # Python dependencies
-├── README.md               # This file
-├── QUICK_START.txt         # Quick reference guide
-├── check_setup.py          # Setup verification script
-├── manage_users.py         # User management utility
-│
-├── database/               # Database module
-│   ├── __init__.py
-│   ├── db.py              # Database connection
-│   └── user_auth.py       # Authentication logic
-│
-├── services/              # External services
-│   └── tmdb_api.py       # TMDb API integration
-│
-├── media/                 # Media handling
-│   ├── __init__.py
-│   ├── movies.py         # Movie/TV data processing
-│   └── image_utils.py    # Image download and processing
-│
-└── assets/               # Static assets
-    └── images/
-        ├── icons/
-        └── posters/      # Cached poster images
-```
 
 ## 🔒 Security Features
 
@@ -172,7 +105,7 @@ The application uses **SHA-256** hashing with a unique salt for each password:
 
 1. **Login**
 
-   - Run `python login.py`
+   - Run `python main.py`
    - Enter username and password
    - Click "Login"
 
@@ -211,33 +144,6 @@ In `media/image_utils.py`, modify the `download_image()` function:
 def download_image(url, width=180, height=270):  # Adjust these values
 ```
 
-### Changing Grid Layout
-
-In `main.py`, modify the `max_cols` variable in `display_items()`:
-
-```python
-max_cols = 4  # Change to 3, 5, etc.
-```
-
-### Adding More Pages of Results
-
-In `main.py`, modify the API calls to fetch multiple pages:
-
-```python
-movies_page1 = get_popular_movies(page=1)
-movies_page2 = get_popular_movies(page=2)
-all_movies = movies_page1 + movies_page2
-```
-
-## 🐛 Troubleshooting
-
-### "Failed to load movies"
-
-- Check your internet connection
-- Verify your TMDb API key is correct in `config.py`
-- Ensure the API key is active (newly created keys may take a few minutes)
-- Run `python check_setup.py` to verify your configuration
-
 ### "No module named 'PIL'"
 
 - Install Pillow: `pip install Pillow`
@@ -272,38 +178,15 @@ python check_setup.py
 - [SQLite3 Documentation](https://docs.python.org/3/library/sqlite3.html)
 - [Hashlib Documentation](https://docs.python.org/3/library/hashlib.html)
 
-## 📝 Code Quality
 
-This project follows Python best practices:
-
-- ✅ Modular code structure
-- ✅ Comprehensive docstrings
-- ✅ Error handling
-- ✅ Clean and readable code
-- ✅ Proper separation of concerns
-
-## 🎓 School Project Notes
-
-This application demonstrates:
-
-- **Database Management**: SQLite for persistent user storage
-- **Security**: Password hashing and salting
-- **API Integration**: RESTful API consumption
-- **GUI Development**: Event-driven programming
-- **Image Processing**: Dynamic content loading
-- **Error Handling**: Graceful failure management
 
 ## 📄 License
 
 This project is created for educational purposes. TMDb API data is provided by The Movie Database and subject to their terms of use.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [The Movie Database (TMDb)](https://www.themoviedb.org/) for the API
 - Python community for excellent libraries
 
 ---
-
-**Created by**: Lauris  
-**Date**: November 2025  
-**Purpose**: School Project
